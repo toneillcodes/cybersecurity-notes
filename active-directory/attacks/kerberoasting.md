@@ -1,4 +1,6 @@
-# Kerberoasting #
+# Kerberoasting
+servicePrincipalName attribute
+## Attack Overview
 Run impacket-GetUserSPNs using known credentials
 ```
 ┌──(kali㉿kali)-[~]
