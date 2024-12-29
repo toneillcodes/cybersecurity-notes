@@ -1,5 +1,6 @@
 # Windows Password Cracking
-Hashes can be obtained through a variety of methods
+Hashes can be obtained through a variety of methods<br>
+They can also be cracked through a variety of methods
 ## john the ripper
 Classic tool for password cracking
 ## hashcat
