@@ -2,6 +2,13 @@
 servicePrincipalName attribute<br>
 Requirements: Credentials, SPN
 ## Enumeration
+### PowerShell
+```
+Get-NetUser | Where-Object {$_.servicePrincipalName}
+```
+```
+setspn -T research -Q */*
+```
 ### LDAP
 ```
 (&(objectClass=user)(objectCategory=user)(servicePrincipalName=*))
