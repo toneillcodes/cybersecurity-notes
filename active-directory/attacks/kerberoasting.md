@@ -155,3 +155,7 @@ Stopped: Thu Dec 26 20:46:28 2024
 ┌──(kali㉿kali)-[~]
 └─$
 ```
+
+## Tools
+- Impacket
+- Rubeus
