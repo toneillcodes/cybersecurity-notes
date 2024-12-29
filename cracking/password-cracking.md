@@ -13,11 +13,11 @@ $ hashcat -m 1000 hashes.txt /usr/share/wordlist/rockyou.txt
 $ hashcat -m 1000 hashes.txt /usr/share/wordlist/rockyou.txt --show
 ```
 ### hashcat modes
-0: md5
-100: SHA1
-1000: NTLM
-1400: SHA-256
-13100: KRB5
+- 0: md5
+- 100: SHA1
+- 1000: NTLM
+- 1400: SHA-256
+- 13100: KRB5
 ## wordlists
 Kali wordlists
 ```
