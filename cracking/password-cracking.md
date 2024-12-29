@@ -1,5 +1,5 @@
 # Password Cracking
-Generic password cracking refernece
+Generic password cracking reference<br>
 For Windows-specific information, check out [Windows Password Cracking](https://github.com/toneillcodes/cybersecurity-notes/blob/main/windows/tools/windows-password-cracking.md)
 ## john the ripper
 Classic tool for password cracking
