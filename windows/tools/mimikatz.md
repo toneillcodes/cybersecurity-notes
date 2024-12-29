@@ -37,3 +37,6 @@ mimikatz(powershell) #
 /usr/share/powershell-empire/empire/server/data/module_source/credentials/Invoke-Mimikatz.ps1 <br>
 /usr/share/powershell-empire/empire/test/data/module_source/credentials/Invoke-Mimikatz.ps1 <br>
 /usr/share/windows-resources/powersploit/Exfiltration/Invoke-Mimikatz.ps1
+## References
+The Hacker Tools - Recipes: Mimikatz<br>
+https://tools.thehacker.recipes/mimikatz
