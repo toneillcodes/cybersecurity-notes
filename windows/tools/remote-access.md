@@ -3,6 +3,10 @@
 ### evil-winrm
 evil-winrm
 ```
+evil-winrm -i example.htb -u ryan -p Password123
+```
+Example output:
+```
 $ evil-winrm -i example.htb -u ryan -p Password123
                                         
 Evil-WinRM shell v3.5
@@ -14,7 +18,7 @@ Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplay
 Info: Establishing connection to remote endpoint
 *Evil-WinRM* PS C:\Users\ryan\Documents>
 ```
-example 2:
+Example 2 (using IP address):
 ```
 $ evil-winrm -i 10.129.241.38 -u emily -p Password123
                                         
