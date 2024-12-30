@@ -1,7 +1,10 @@
 # Kerberoasting
+## Summary
 SPN = Service Principal Name<br >
 SPN is an attribute (servicePrincipalName) that ties a service to a user account within AD<br>
-Attack Requirements: Credentials, SPN
+## Attack Requirements
+- Credentials
+- SPN
 ## Enumeration
 ### PowerShell
 ```
