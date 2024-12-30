@@ -167,3 +167,4 @@ Stopped: Thu Dec 26 20:46:28 2024
 ## Tools
 - Impacket
 - Rubeus
+- targetedKerberos.py
