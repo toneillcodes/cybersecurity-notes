@@ -123,12 +123,17 @@ result: 0 Success
 
 $
 ```
+Lookup user objects
+```
+ldapsearch -x -H ldap://10.129.237.154 -D 'SVC_TGS' -w 'Password123' -b "DC=example,DC=htb" "(objectClass=user)"
+```
+
 Lookup users, ignore inactive accounts (useraccountcontrol=2)
 ```
-ldapsearch -x -H 'ldap://10.129.237.154' -D 'SVC_TGS' -w 'Password123' -b "dc=active,dc=htb" -s sub "(&(objectCategory=person)(objectClass=user)(!(useraccountcontrol:1.2.840.113556.1.4.803:=2)))" samaccountname | grep sAMAccountNameccountName
+ldapsearch -x -H 'ldap://10.129.237.154' -D 'SVC_TGS' -w 'Password123' -b "dc=example,dc=htb" -s sub "(&(objectCategory=person)(objectClass=user)(!(useraccountcontrol:1.2.840.113556.1.4.803:=2)))" samaccountname | grep sAMAccountNameccountName
 ```
 ```
-$ ldapsearch -x -H 'ldap://10.129.237.154' -D 'SVC_TGS' -w 'Password123' -b "dc=active,dc=htb" -s sub "(&(objectCategory=person)(objectClass=user)(!(useraccountcontrol:1.2.840.113556.1.4.803:=2)))" samaccountname | grep sAMAccountNameccountName
+$ ldapsearch -x -H 'ldap://10.129.237.154' -D 'SVC_TGS' -w 'Password123' -b "dc=example,dc=htb" -s sub "(&(objectCategory=person)(objectClass=user)(!(useraccountcontrol:1.2.840.113556.1.4.803:=2)))" samaccountname | grep sAMAccountNameccountName
 sAMAccountName: Administrator
 sAMAccountName: SVC_TGS
 $ 
