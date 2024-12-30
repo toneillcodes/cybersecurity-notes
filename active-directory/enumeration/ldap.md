@@ -5,6 +5,7 @@ LDAP stores sensitive, operational data
 ```
 ldapsearch -H ldap://certified.htb -x -s base -b '' "(objectClass=*)" "*"
 ```
+Example output:
 ```
 $ ldapsearch -H ldap://certified.htb -x -s base -b '' "(objectClass=*)" "*"
 # extended LDIF
