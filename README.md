@@ -5,4 +5,4 @@
 This is repo of notes and examples that I've collected on various cybersecurity tools/tactics/procedures (TTPs).<br>
 I needed to reorganize and this seemed like a good opportunity to centralize my notes in a format that is easy to work with and accessible.<br>
 I thought I'd share with everyone, so this repo is currently public but everything is subject to change.<br>
-
+Helpful for eCPPT, eWPTX, PNPT.
