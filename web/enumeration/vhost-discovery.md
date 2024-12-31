@@ -1,3 +1,3 @@
-# Vhost
+# Vhost Discovery
 ## gobuster
 gobuster vhost ...
