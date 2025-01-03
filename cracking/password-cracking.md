@@ -4,6 +4,9 @@ For Windows-specific information, check out [Windows Password Cracking](https://
 ## john the ripper
 Classic tool for password cracking
 ```
+john hashes.txt -w=/usr/share/wordlists/rockyou.txt
+```
+```
 $ john hashes.txt -w=/usr/share/wordlists/rockyou.txt 
 Using default input encoding: UTF-8
 Loaded 1 password hash (krb5tgs, Kerberos 5 TGS etype 23 [MD4 HMAC-MD5 RC4])
