@@ -1,4 +1,5 @@
 # Pivoting
+Pivoting can expose services/hosts that may not normally be accessible.
 
 ## SSH Port Forwarding
 ```
@@ -10,6 +11,9 @@ Routing functionality available through meterpreter sessions
 
 ## chisel
 Server and client in a single binary
+
+## sshuttle
+Transparent proxy
 
 ## proxychains
 Direct binary traffic through SOCKS proxy
