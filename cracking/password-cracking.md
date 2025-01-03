@@ -6,6 +6,7 @@ Classic tool for password cracking
 ```
 john hashes.txt -w=/usr/share/wordlists/rockyou.txt
 ```
+Example output:
 ```
 $ john hashes.txt -w=/usr/share/wordlists/rockyou.txt 
 Using default input encoding: UTF-8
@@ -27,6 +28,7 @@ $ hashcat -m 1000 hashes.txt /usr/share/wordlist/rockyou.txt
 ```
 $ hashcat -m 1000 hashes.txt /usr/share/wordlist/rockyou.txt --show
 ```
+Example output:
 ```
 $ hashcat -m 13100 hashes.txt /usr/share/wordlists/rockyou.txt 
 hashcat (v6.2.6) starting
