@@ -115,6 +115,7 @@ $
 - 1400: SHA-256
 - 3200: bcrypt
 - 13100: KRB5
+- 18200: AS-REP
 ## wordlists
 Kali wordlists
 ```
