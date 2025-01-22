@@ -1,6 +1,8 @@
 # File & Directory Scanning
 ## dirb
-Notes
+```
+dirb https://example.htb
+```
 ```
 $ dirb https://example.htb
 
