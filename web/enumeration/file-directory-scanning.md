@@ -89,3 +89,34 @@ DOWNLOADED: 4612 - FOUND: 9
 $
 ```
 ## gobuster
+
+```
+gobuster dir -u http://example.htb -w /usr/share/wordlists/dirb/common.txt
+```
+
+```
+$ gobuster dir -u http://example.htb -w /usr/share/wordlists/dirb/common.txt
+===============================================================
+Gobuster v3.5
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://example.htb
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirb/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.5
+[+] Timeout:                 10s
+===============================================================
+2023/03/31 13:34:20 Starting gobuster in directory enumeration mode
+===============================================================
+/download             (Status: 302) [Size: 249] [--> /account/login?next=%2Fdownload]
+/static               (Status: 301) [Size: 178] [--> http://example.htb/static/]
+/vault                (Status: 302) [Size: 243] [--> /account/login?next=%2Fvault]
+Progress: 4516 / 4615 (97.85%)
+===============================================================
+2023/03/31 13:34:30 Finished
+===============================================================
+
+$
+```
