@@ -1,6 +1,6 @@
 # File Transfers
 
-# File Transfer Protocol
+## File Transfer Protocol
 FTP listener
 ```
 python -m pyftpdlib 21
@@ -10,6 +10,18 @@ FTP client
 ftp 10.0.2.12
 ```
 
+## PowerShell
+Iex(DownloadString)
+
+DownloadFile
+```
+$url = "https://example.com/file.zip"
+$destination = "C:\Downloads\file.zip"
+
+(New-Object System.Net.WebClient).DownloadFile($url, $destination)
+```
+
+Invoke-WebRequest
 
 ## certutil
 Example:
