@@ -17,7 +17,7 @@ setspn -T research -Q */*
 ```
 (&(objectClass=user)(objectCategory=user)(servicePrincipalName=*))
 ```
-### GetUserSPNs
+### impacket-GetUserSPNs
 ```
 impacket-GetUserSPNs MARVEL.local/fcastle:Password1 -dc-ip 10.0.2.15 -request
 ```
