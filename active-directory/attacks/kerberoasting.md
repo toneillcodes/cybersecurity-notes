@@ -8,10 +8,11 @@ SPN is an attribute (servicePrincipalName) that ties a service to a user account
 ## Enumeration
 ### PowerShell
 ```
-Get-NetUser | Where-Object {$_.servicePrincipalName}
-```
-```
 setspn -T research -Q */*
+```
+### PowerSploit
+```
+Get-NetUser | Where-Object {$_.servicePrincipalName}
 ```
 ### LDAP
 ```
