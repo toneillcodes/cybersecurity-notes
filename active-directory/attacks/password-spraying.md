@@ -1,4 +1,5 @@
 # Password Spraying
+[DomainPasswordSpray Project](https://github.com/dafthack/DomainPasswordSpray)
 Check or confirm lockout threshold
 ## nxc
 Test a single password value with a list of user names
@@ -18,4 +19,4 @@ Invoke-DomainPasswordSpray -Password Spring2017
 ```
 Invoke-DomainPasswordSpray -UserList .\users.txt -Password Winter2025 -Verbose
 ```
-[DomainPasswordSpray Project](https://github.com/dafthack/DomainPasswordSpray)
+
