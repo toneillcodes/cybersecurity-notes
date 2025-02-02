@@ -2,7 +2,7 @@
 ## Overview
 - [Enumeration](https://github.com/toneillcodes/cybersecurity-notes/tree/main/active-directory/enumeration)
     - LDAP, SMB (NXC)
-    - Bloodhound, Plumhound, PingCastle
+    - [Bloodhound](https://github.com/toneillcodes/cybersecurity-notes/blob/main/active-directory/enumeration/bloodhound.md), Plumhound, PingCastle
 - [AS-REP Roasting](https://github.com/toneillcodes/cybersecurity-notes/blob/main/active-directory/attacks/asrep-roasting.md)
 - [Kerberoasting](https://github.com/toneillcodes/cybersecurity-notes/blob/main/active-directory/attacks/kerberoasting.md)
 - secretsdump (requires admin)
