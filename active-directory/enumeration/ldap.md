@@ -142,6 +142,145 @@ $
 ```
 enum4linux -u testuser -p Password123 10.129.121.92
 ```
+Example output:
+```
+┌──(kali㉿kali)-[~]
+└─$ enum4linux 10.0.2.15 -u fcastle -p Password1
+Starting enum4linux v0.9.1 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Sun Feb  2 12:11:49 2025
+
+ =========================================( Target Information )=========================================
+                                                                                                                                                          
+Target ........... 10.0.2.15                                                                                                                              
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+ =============================( Enumerating Workgroup/Domain on 10.0.2.15 )=============================
+                                                                                                                                                          
+                                                                                                                                                          
+[+] Got domain/workgroup name: MARVEL                                                                                                                     
+                                                                                                                                                          
+                                                                                                                                                          
+ =================================( Nbtstat Information for 10.0.2.15 )=================================
+                                                                                                                                                          
+Looking up status of 10.0.2.15                                                                                                                            
+        HYDRA-DC        <00> -         B <ACTIVE>  Workstation Service
+        MARVEL          <00> - <GROUP> B <ACTIVE>  Domain/Workgroup Name
+        MARVEL          <1c> - <GROUP> B <ACTIVE>  Domain Controllers
+        HYDRA-DC        <20> -         B <ACTIVE>  File Server Service
+        MARVEL          <1b> -         B <ACTIVE>  Domain Master Browser
+
+        MAC Address = 08-00-27-B1-B8-2C
+
+ =====================================( Session Check on 10.0.2.15 )=====================================
+                                                                                                                                                          
+                                                                                                                                                          
+[+] Server 10.0.2.15 allows sessions using username '', password ''                                                                                       
+                                                                                                                                                          
+                                                                                                                                                          
+ ==================================( Getting domain SID for 10.0.2.15 )==================================
+                                                                                                                                                          
+Domain Name: MARVEL                                                                                                                                       
+Domain Sid: S-1-5-21-2581533897-608573359-3386076638
+
+[+] Host is part of a domain (not a workgroup)                                                                                                            
+                                                                                                                                                          
+                                                                                                                                                          
+ ====================================( OS information on 10.0.2.15 )====================================
+                                                                                                                                                          
+                                                                                                                                                          
+[E] Can't get OS info with smbclient                                                                                                                      
+                                                                                                                                                          
+                                                                                                                                                          
+[+] Got OS info for 10.0.2.15 from srvinfo:                                                                                                               
+do_cmd: Could not initialise srvsvc. Error was NT_STATUS_ACCESS_DENIED                                                                                    
+
+
+ =========================================( Users on 10.0.2.15 )=========================================
+                                                                                                                                                          
+                                                                                                                                                          
+[E] Couldn't find users using querydispinfo: NT_STATUS_ACCESS_DENIED                                                                                      
+                                                                                                                                                          
+                                                                                                                                                          
+
+[E] Couldn't find users using enumdomusers: NT_STATUS_ACCESS_DENIED                                                                                       
+                                                                                                                                                          
+                                                                                                                                                          
+ ===================================( Share Enumeration on 10.0.2.15 )===================================
+                                                                                                                                                          
+do_connect: Connection to 10.0.2.15 failed (Error NT_STATUS_RESOURCE_NAME_NOT_FOUND)                                                                      
+
+        Sharename       Type      Comment
+        ---------       ----      -------
+Reconnecting with SMB1 for workgroup listing.
+Unable to connect with SMB1 -- no workgroup available
+
+[+] Attempting to map shares on 10.0.2.15                                                                                                                 
+                                                                                                                                                          
+                                                                                                                                                          
+ =============================( Password Policy Information for 10.0.2.15 )=============================
+                                                                                                                                                          
+                                                                                                                                                          
+[E] Unexpected error from polenum:                                                                                                                        
+                                                                                                                                                          
+                                                                                                                                                          
+
+[+] Attaching to 10.0.2.15 using a NULL share
+
+[+] Trying protocol 139/SMB...
+
+        [!] Protocol failed: Cannot request session (Called Name:10.0.2.15)
+
+[+] Trying protocol 445/SMB...
+
+        [!] Protocol failed: SAMR SessionError: code: 0xc0000022 - STATUS_ACCESS_DENIED - {Access Denied} A process has requested access to an object but has not been granted those access rights.
+
+
+
+[E] Failed to get password policy with rpcclient                                                                                                          
+                                                                                                                                                          
+                                                                                                                                                          
+
+ ========================================( Groups on 10.0.2.15 )========================================
+                                                                                                                                                          
+                                                                                                                                                          
+[+] Getting builtin groups:                                                                                                                               
+                                                                                                                                                          
+                                                                                                                                                          
+[+]  Getting builtin group memberships:                                                                                                                   
+                                                                                                                                                          
+                                                                                                                                                          
+[+]  Getting local groups:                                                                                                                                
+                                                                                                                                                          
+                                                                                                                                                          
+[+]  Getting local group memberships:                                                                                                                     
+                                                                                                                                                          
+                                                                                                                                                          
+[+]  Getting domain groups:                                                                                                                               
+                                                                                                                                                          
+                                                                                                                                                          
+[+]  Getting domain group memberships:                                                                                                                    
+                                                                                                                                                          
+                                                                                                                                                          
+ ====================( Users on 10.0.2.15 via RID cycling (RIDS: 500-550,1000-1050) )====================
+                                                                                                                                                          
+                                                                                                                                                          
+[E] Couldn't get SID: NT_STATUS_ACCESS_DENIED.  RID cycling not possible.                                                                                 
+                                                                                                                                                          
+                                                                                                                                                          
+ =================================( Getting printer info for 10.0.2.15 )=================================
+                                                                                                                                                          
+do_cmd: Could not initialise spoolss. Error was NT_STATUS_ACCESS_DENIED                                                                                   
+
+
+enum4linux complete on Sun Feb  2 12:11:50 2025
+
+                                                                                                                                                          
+┌──(kali㉿kali)-[~]
+└─$ 
+```
 ### NetExec
 #### LDAP Module
 Enumerate users:
@@ -183,6 +322,25 @@ LDAP        10.129.254.250  389    EXAMPLE         zach                         
 LDAP        10.129.254.250  389    EXAMPLE         simon                         2019-12-04 10:39:58 0                                            
 LDAP        10.129.254.250  389    EXAMPLE         naoki                         2019-12-04 10:40:44 0                                            
 $ 
+```
+Example output:
+```
+┌──(kali㉿kali)-[~]
+└─$ nxc ldap 10.0.2.15 -d marvel.local -u fcastle -p Password1 --users
+SMB         10.0.2.15       445    HYDRA-DC         [*] Windows 10.0 Build 26100 x64 (name:HYDRA-DC) (domain:MARVEL.local) (signing:True) (SMBv1:False)
+LDAPS       10.0.2.15       636    HYDRA-DC         [+] marvel.local\fcastle:Password1 
+LDAPS       10.0.2.15       636    HYDRA-DC         [*] Enumerated 7 domain users: marvel.local
+LDAPS       10.0.2.15       636    HYDRA-DC         -Username-                    -Last PW Set-       -BadPW- -Description-                               
+LDAPS       10.0.2.15       636    HYDRA-DC         Administrator                 2024-12-10 02:48:15 0       Built-in account for administering the computer/domain                                                                                                                                                
+LDAPS       10.0.2.15       636    HYDRA-DC         Guest                         <never>             0       Built-in account for guest access to the computer/domain                                                                                                                                              
+LDAPS       10.0.2.15       636    HYDRA-DC         krbtgt                        2024-12-10 03:00:30 0       Key Distribution Center Service Account     
+LDAPS       10.0.2.15       636    HYDRA-DC         tstark                        2024-12-12 05:16:09 0                                                   
+LDAPS       10.0.2.15       636    HYDRA-DC         sqlservice                    2024-12-12 05:17:51 0       password is MYpassword123#                  
+LDAPS       10.0.2.15       636    HYDRA-DC         fcastle                       2024-12-12 05:19:30 0                                                   
+LDAPS       10.0.2.15       636    HYDRA-DC         pparker                       2024-12-12 05:21:36 0                                                   
+                                                                                                                                                          
+┌──(kali㉿kali)-[~]
+└─$ 
 ```
 ### impacket-GetADUsers
 ```
