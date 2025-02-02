@@ -2,7 +2,7 @@
 [DomainPasswordSpray Project](https://github.com/dafthack/DomainPasswordSpray)
 Check or confirm lockout threshold
 ## nxc
-Test a single password value with a list of user names
+1. Test a single password value with a list of user names
 SMB Example:
 ```
 nxc smb 10.0.2.15 -u users.txt -p Password1 --continue-on-success
