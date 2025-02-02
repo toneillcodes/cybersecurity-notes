@@ -1,9 +1,12 @@
 # Server Message Block
 Server Message Block (SMB) is a network protocol that allows devices to share files, printers, and other resources across a network.
-## user enumeration
+## User Enumeration
 ### netexec
 requires credentials
-Enumerate users
+Enumerate users via SMB
+```
+nxc smb 10.0.2.15 -d marvel.local -u fcastle -p Password1 --users
+```
 Example output:
 ```
 ┌──(kali㉿kali)-[~]
@@ -23,7 +26,8 @@ SMB         10.0.2.15       445    HYDRA-DC         [*] Enumerated 7 local users
 ┌──(kali㉿kali)-[~]
 └─$
 ```
-RID Brute
+## RID Enumeration
+Enumerate RID values via SMB
 ```
 nxc smb 10.0.2.15 -d marvel.local -u fcastle -p Password1 --rid-brute
 ```
