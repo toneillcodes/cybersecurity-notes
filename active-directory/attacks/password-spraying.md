@@ -1,5 +1,8 @@
 # Password Spraying
 NOTE: Always check or confirm lockout threshold before spraying
+```
+nxc smb 10.0.2.15 -d marvel.local -u fcastle -p Password1 --pass-pol
+```
 ## netexec
 - [nxc Password Spraying documentation](https://www.netexec.wiki/smb-protocol/password-spraying)
 - NOTE: By default nxc will exit after a successful login is found. Using the --continue-on-success flag, it will continue spraying even after a valid password is found. Useful for spraying a single password against a large user list. This is incompatible with command execution.
