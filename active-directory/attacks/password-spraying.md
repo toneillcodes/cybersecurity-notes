@@ -6,6 +6,14 @@ SMB Example:
 ```
 nxc smb 10.0.2.15 -u users.txt -p Password1 --continue-on-success
 ```
+Multiple usernames (space delimeter):
+```
+nxc smb 192.168.1.101 -u user1 user2 user3 -p Summer18
+```
+Multiple passwords (space delimeter):
+```
+nxc smb 192.168.1.101 -u user1 -p password1 password2 password3
+```
 LDAP Example:
 ```
 nxc ldap 10.0.2.15 -u users.txt -p Password1 --continue-on-success
