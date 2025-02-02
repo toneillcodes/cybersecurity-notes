@@ -1,14 +1,14 @@
 # Active Directory Playbook
 ## Overview
-- Enumeration using tools
+- [Enumeration](https://github.com/toneillcodes/cybersecurity-notes/tree/main/active-directory/enumeration)
     - LDAP, SMB (NXC)
     - Bloodhound, Plumhound, PingCastle
-- AS-REP Roasting
-- Kerberoasting
+- [AS-REP Roasting](https://github.com/toneillcodes/cybersecurity-notes/blob/main/active-directory/attacks/asrep-roasting.md)
+- [Kerberoasting](https://github.com/toneillcodes/cybersecurity-notes/blob/main/active-directory/attacks/kerberoasting.md)
 - secretsdump (requires admin)
-- Password cracking
+- [Password cracking](https://github.com/toneillcodes/cybersecurity-notes/blob/main/cracking/password-cracking.md)
 - PTH/PTP for lateral movement
-- Password spraying
+- [Password spraying](https://github.com/toneillcodes/cybersecurity-notes/blob/main/active-directory/attacks/password-spraying.md)
 - Repeat
 ## Attacks
 - [LLMNR Poisoning](https://github.com/toneillcodes/cybersecurity-notes/blob/main/active-directory/attacks/llmnr-poisoning.md)
