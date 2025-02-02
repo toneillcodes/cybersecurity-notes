@@ -11,8 +11,8 @@ LDAP Example:
 nxc ldap 10.0.2.15 -u users.txt -p Password1 --continue-on-success
 ```
 ## DomainPasswordSpray
-[DomainPasswordSpray Project](https://github.com/dafthack/DomainPasswordSpray)
-PowerShell tool
+- [DomainPasswordSpray Project](https://github.com/dafthack/DomainPasswordSpray)
+- PowerShell tool
 ```
 . .\DomainPasswordSpray.ps1
 Invoke-DomainPasswordSpray -Password Spring2017
