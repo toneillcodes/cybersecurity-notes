@@ -1,6 +1,5 @@
 # Password Spraying
-[DomainPasswordSpray Project](https://github.com/dafthack/DomainPasswordSpray)
-Check or confirm lockout threshold
+NOTE: Always check or confirm lockout threshold
 ## nxc
 1. Test a single password value with a list of user names
 SMB Example:
@@ -12,6 +11,8 @@ LDAP Example:
 nxc ldap 10.0.2.15 -u users.txt -p Password1 --continue-on-success
 ```
 ## DomainPasswordSpray
+[DomainPasswordSpray Project](https://github.com/dafthack/DomainPasswordSpray)
+PowerShell tool
 ```
 . .\DomainPasswordSpray.ps1
 Invoke-DomainPasswordSpray -Password Spring2017
