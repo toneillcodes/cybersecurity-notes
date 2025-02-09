@@ -1,6 +1,10 @@
 # File & Directory Scanning
 - In most cases, disabling recursive search is helpful
 - Define a user agent or provide a list of user agents
+## Index
+- [dirb](#dirb)
+- [gobuster](#gobuster)
+- [dirbuster](#dirbuster)
 ## dirb
 Example command:
 ```
