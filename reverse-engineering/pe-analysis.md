@@ -1,4 +1,6 @@
 # PE Analysis
 ## String Extraction
-strings
-floss
+- strings
+- floss
+## Code Analysis
+- capa
