@@ -1,5 +1,12 @@
 # Kerberoasting
 ## Summary
+Takes advantage of the [TGS Exchange](https://datatracker.ietf.org/doc/html/rfc4120#page-34) flow
+```
+  Message direction       Message type     Section
+         1. Client to Kerberos   KRB_TGS_REQ      5.4.1
+         2. Kerberos to client   KRB_TGS_REP or   5.4.2
+                                 KRB_ERROR        5.9.1
+```
 SPN = Service Principal Name<br >
 SPN is an attribute (servicePrincipalName) that ties a service to a user account within AD<br>
 Kerberos messages are defined in [RFC 4120](https://datatracker.ietf.org/doc/html/rfc4120)<br >
