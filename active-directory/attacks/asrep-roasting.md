@@ -4,7 +4,7 @@ AS-REP
 ## Attack Requirements
 - Target account
 ## Enumeration Methods
-### PowerShell
+### PowerSploit
 ```
 Get-Domainuser | Where-Object { $_.UserAccountControl -like "*DONT_REQ_PREAUTH"}
 ```
