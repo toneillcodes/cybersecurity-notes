@@ -8,10 +8,11 @@ This attack takes advantage of the [Ticket Granting Service (TGS) Exchange](http
                           KRB_ERROR        5.9.1
 ```
 ```
-The TGS exchange consists of two messages: a request (KRB_TGS_REQ) from the client to the Kerberos Ticket-Granting Server, and a reply
-(KRB_TGS_REP or KRB_ERROR).  The KRB_TGS_REQ message includes information authenticating the client plus a request for credentials.
-The authentication information consists of the authentication header (KRB_AP_REQ), which includes the client's previously obtained
-ticket-granting, renewable, or invalid ticket.
+The TGS exchange consists of two messages: a request (KRB_TGS_REQ) from the client to the
+Kerberos Ticket-Granting Server, and a reply (KRB_TGS_REP or KRB_ERROR). The KRB_TGS_REQ
+message includes information authenticating the client plus a request for credentials.
+The authentication information consists of the authentication header (KRB_AP_REQ), which
+includes the client's previously obtained ticket-granting, renewable, or invalid ticket.
 ```
 SPN = Service Principal Name<br >
 SPN is an attribute (servicePrincipalName) that ties a service to a user account within AD<br>
