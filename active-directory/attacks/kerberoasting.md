@@ -16,7 +16,6 @@ includes the client's previously obtained ticket-granting, renewable, or invalid
 ```
 SPN = Service Principal Name<br >
 SPN is an attribute (servicePrincipalName) that ties a service to a user account within AD<br>
-Kerberos messages are defined in [RFC 4120](https://datatracker.ietf.org/doc/html/rfc4120)<br >
 1. KRB_AS_REQ
 2. AS-REP
    - The AS-REP message is the response from the Key Distribution Center (KDC) Authentication Service (AS) to a client's initial authentication request (KRB_AS_REQ).
