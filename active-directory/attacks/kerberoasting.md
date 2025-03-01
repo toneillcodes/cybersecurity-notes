@@ -28,14 +28,34 @@ Kerberos messages are defined in [RFC 4120](https://datatracker.ietf.org/doc/htm
 ```
 (&(objectClass=user)(objectCategory=user)(servicePrincipalName=*))
 ```
-### PowerShell
+### Command Line
 ```
 setspn -T research -Q */*
+```
+```
+setspn -T marvel.local -Q */*
 ```
 ### PowerSploit
 ```
 Get-NetUser | Where-Object {$_.servicePrincipalName}
 ```
+### impacket-GetUserSPNs
+```
+impacket-GetUserSPNs MARVEL.local/fcastle:Password1 -dc-ip 10.0.2.15
+```
+```
+┌──(kali㉿kali)-[~]
+└─$ impacket-GetUserSPNs MARVEL.local/fcastle:Password1 -dc-ip 10.0.2.15
+Impacket v0.12.0 - Copyright Fortra, LLC and its affiliated companies 
+
+ServicePrincipalName                    Name        MemberOf                                                     PasswordLastSet             LastLogon  Delegation 
+--------------------------------------  ----------  -----------------------------------------------------------  --------------------------  ---------  ----------
+HYDRA-DC/sqlservice.MARVEL.local:60111  sqlservice  CN=Group Policy Creator Owners,OU=Groups,DC=MARVEL,DC=local  2024-12-12 00:17:51.754327  <never>               
+                                                           
+┌──(kali㉿kali)-[~]
+└─$ 
+```
+
 ## Attack Tools
 ### impacket-GetUserSPNs
 ```
