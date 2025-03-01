@@ -1,6 +1,6 @@
 # Kerberoasting
 ## Summary
-This attack takes advantage of the [Ticket Granting Service (TGS) Exchange](https://datatracker.ietf.org/doc/html/rfc4120#page-34) flow
+This attack takes advantage of the [Ticket Granting Service (TGS) Exchange](https://datatracker.ietf.org/doc/html/rfc4120#section-3.3) flow
 ```
   Message direction       Message type     Section
 1. Client to Kerberos     KRB_TGS_REQ      5.4.1
