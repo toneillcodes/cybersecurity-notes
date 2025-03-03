@@ -1,7 +1,22 @@
 # Metasploit Tunneling
 ## Routing Traffic
 ### Meterpreter
-- Create a route
+
+```
+[msf](Jobs:0 Agents:1) exploit(multi/handler) >> use post/multi/manage/autoroute
+[msf](Jobs:0 Agents:1) post(multi/manage/autoroute) >> set session 1
+session => 1
+[msf](Jobs:0 Agents:1) post(multi/manage/autoroute) >> run
+
+[!] SESSION may not be compatible with this module:
+[!]  * incompatible session platform: linux
+[*] Running module against 172.16.1.23
+[*] Searching for subnets to autoroute.
+[+] Route added to subnet 172.16.1.0/255.255.255.0 from host's routing table.
+[*] Post module execution completed
+[msf](Jobs:0 Agents:1) post(multi/manage/autoroute) >> 
+```
+- Create a route manually
 - Deprecated, but still works (for now):
 ```
 run autoroute -s 10.129.207.128/20
