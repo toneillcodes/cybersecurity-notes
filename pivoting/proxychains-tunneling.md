@@ -28,3 +28,49 @@ Nmap done: 1 IP address (1 host up) scanned in 3277.29 seconds
 
 $
 ```
+
+Example
+```
+$ nc -w 1 -vv 172.16.1.23 80
+172.16.1.23: inverse host lookup failed: Unknown host
+(UNKNOWN) [172.16.1.23] 80 (http) : Connection timed out
+ sent 0, rcvd 0
+$ proxychains nc -w 1 -vv 172.16.1.23 80
+[proxychains] config file found: /etc/proxychains.conf
+[proxychains] preloading /usr/lib/x86_64-linux-gnu/libproxychains.so.4
+[proxychains] DLL init: proxychains-ng 4.16
+[proxychains] Strict chain  ...  127.0.0.1:9050  ...  172.16.1.23:80  ...  OK
+172.16.1.23 [172.16.1.23] 80 (http) open : Operation now in progress
+GET /
+HTTP/1.1 400 Bad Request
+Date: Mon, 03 Mar 2025 17:39:27 GMT
+Server: Apache/2.4.29 (Ubuntu)
+Content-Length: 301
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Apache/2.4.29 (Ubuntu) Server at 127.0.1.1 Port 80</address>
+</body></html>
+ sent 6, rcvd 483
+$
+```
+
+## SOCKS 5
+```
+$ sudo vi /etc/proxychains.conf 
+...
+[ProxyList]
+# add proxy here ...
+# meanwile
+# defaults set to "tor"
+socks5 	127.0.0.1 9050
+$
+```
