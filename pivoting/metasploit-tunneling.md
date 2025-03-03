@@ -27,3 +27,21 @@ Forward a port
 ```
 portfwd add -l 5432 -p 5432 -r 10.129.207.128
 ```
+## SOCKS Proxy
+### Meterpreter
+```
+use auxiliary/server/socks_proxy
+```
+```
+[msf](Jobs:0 Agents:1) post(multi/manage/autoroute) >> use auxiliary/server/socks_proxy
+[msf](Jobs:0 Agents:1) auxiliary(server/socks_proxy) >> set version 5
+version => 5
+[msf](Jobs:0 Agents:1) auxiliary(server/socks_proxy) >> set srvport 9050
+srvport => 9050
+[msf](Jobs:0 Agents:1) auxiliary(server/socks_proxy) >> run
+[*] Auxiliary module running as background job 0.
+[msf](Jobs:1 Agents:1) auxiliary(server/socks_proxy) >> 
+[*] Starting the SOCKS proxy server
+
+[msf](Jobs:1 Agents:1) auxiliary(server/socks_proxy) >> 
+```
