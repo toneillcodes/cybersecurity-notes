@@ -1,8 +1,8 @@
 # Metasploit Tunneling
 ## Routing Traffic
 ### Meterpreter
-Create a route
-Deprecated, but still works (for now):
+- Create a route
+- Deprecated, but still works (for now):
 ```
 run autoroute -s 10.129.207.128/20
 ```
