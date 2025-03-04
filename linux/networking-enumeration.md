@@ -91,3 +91,11 @@ Example output:
 ```
 todo
 ```
+## netstat
+```
+netstat -anp
+```
+Example output:
+```
+todo
+```
