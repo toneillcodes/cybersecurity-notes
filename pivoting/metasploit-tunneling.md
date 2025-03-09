@@ -27,6 +27,21 @@ Forward a port
 ```
 portfwd add -l 5432 -p 5432 -r 10.129.207.128
 ```
+```
+portfwd add -l 5432 -p 5432 -r 127.0.0.1
+```
+```
+(Meterpreter 1)(/home/bob/.mal) > portfwd add -l 5432 -p 5432 -r 127.0.0.1
+[*] Forward TCP relay created: (local) :5432 -> (remote) 127.0.0.1:5432
+(Meterpreter 1)(/home/bob/.mal) >
+```
+```
+$ psql -U postgres -h 127.0.0.1 -p 5432
+psql (15.10 (Debian 15.10-0+deb12u1), server 9.6.0)
+Type "help" for help.
+
+postgres=# 
+```
 ## SOCKS Proxy
 ### Meterpreter
 ```
