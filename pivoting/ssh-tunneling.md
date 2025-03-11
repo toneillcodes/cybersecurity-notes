@@ -5,7 +5,7 @@ Dynamic SOCKS forwarding on port 9050 through 10.0.2.7
 ```
 ssh -f -N -D 9050 root@10.0.2.7
 ```
-Dynamic SOCKS forwarding on port 9050 through 10.0.2.7 using the identity in 'pivot_id'
+Dynamic SOCKS forwarding on port 9050 through 10.0.2.7 using the private key in 'pivot_id'
 ```
 ssh -f -N -D 9050 -i pivot_id root@10.0.2.7
 ```
