@@ -6,7 +6,6 @@ We can request access to any resource or system on the domain<br>
 - Domain SID
 - Target RID
 ## Attack Overview
-Notes
 Obtain RID values
 ```
 crackmapexec smb 10.129.121.92 -u 'testuser' -p 'Password123' --rid-brute
