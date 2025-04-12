@@ -210,6 +210,7 @@ Stopped: Thu Dec 26 20:46:28 2024
 ```
 
 ## Tools
+- Netexec
 - Impacket
 - Rubeus
 - targetedKerberos.py
