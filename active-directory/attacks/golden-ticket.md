@@ -8,6 +8,8 @@ We can request access to any resource or system on the domain<br>
 ## Attack Overview
 Obtain RID values
 ```
+nxc smb 10.129.121.92 -u 'testuser' -p 'Password123' --rid-brute
+```
 crackmapexec smb 10.129.121.92 -u 'testuser' -p 'Password123' --rid-brute
 ```
 ```
