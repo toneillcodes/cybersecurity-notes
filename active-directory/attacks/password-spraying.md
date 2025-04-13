@@ -1,6 +1,9 @@
 # Password Spraying
 NOTE: Always check or confirm lockout threshold before spraying
 ```
+ldapsearch -D 'MARVEL\support' -w 'redacted' -p 389 -h 10.10.10.192 -b "dc=marvel,dc=local" -s sub "*" | grep lockoutThreshold
+```
+```
 nxc smb 10.0.2.15 -d marvel.local -u fcastle -p Password1 --pass-pol
 ```
 ## netexec
