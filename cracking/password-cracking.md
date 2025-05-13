@@ -114,6 +114,7 @@ $
 - 1000: NTLM
 - 1400: SHA-256
 - 3200: bcrypt
+- 10900: PBKDF2-HMAC-SHA256
 - 13100: KRB5
 - 18200: AS-REP
 ## wordlists
